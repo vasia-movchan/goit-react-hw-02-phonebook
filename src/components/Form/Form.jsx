@@ -21,7 +21,6 @@ class Form extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <FormTitle>Phonebook</FormTitle>
         <FormLabel>
           Name
           <FormInput
@@ -49,10 +48,6 @@ class Form extends Component {
     );
   }
 }
-
-const FormTitle = styled.p`
-  font-size: 32px;
-`;
 
 const FormLabel = styled.label`
   font-size: 20px;

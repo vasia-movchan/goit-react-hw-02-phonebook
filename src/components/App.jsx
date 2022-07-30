@@ -11,8 +11,6 @@ class App extends Component {
       { id: 'id-3', name: 'Eden Clements', number: '645-17-79' },
       { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
     ],
-    name: '',
-    number: '',
     filter: '',
   };
 
@@ -35,7 +33,9 @@ class App extends Component {
   render() {
     return (
       <>
+        <h1>Phonebook</h1>
         <Form onSubmit={this.addContact}></Form>
+        <h2>Contacts</h2>
         <Find handleFindInput={this.handleFindInput} />
         <Contacts contacts={this.contactsList(this.state.contacts)}></Contacts>
       </>

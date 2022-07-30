@@ -11,7 +11,6 @@ class Find extends Component {
   render() {
     return (
       <>
-        <ContactsTitle>Contacts</ContactsTitle>
         <FindLabel>
           Find contacts by name
           <FindInput type="text" onChange={this.handleChange}></FindInput>
@@ -21,13 +20,8 @@ class Find extends Component {
   }
 }
 
-const ContactsTitle = styled.p`
-  font-size: 28px;
-  margin-bottom: 8px;
-`;
-
 const FindLabel = styled.label`
-  font-size: 20px;
+  font-size: 16px;
 `;
 
 const FindInput = styled.input`
