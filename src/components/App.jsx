@@ -6,6 +6,7 @@ class App extends Component {
   state = {
     contacts: [],
     name: '',
+    number: '',
   };
 
   addContact = contact => {
