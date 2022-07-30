@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import Find from 'components/Find/Find';
 
 const Contacts = ({ contacts }) => {
   return (
     <>
-      <ContactsTitle>Contacts</ContactsTitle>
       <ContactsList>
         {contacts.map(contact => (
           <ContactsItem key={contact.id}>
@@ -15,11 +15,6 @@ const Contacts = ({ contacts }) => {
     </>
   );
 };
-
-const ContactsTitle = styled.p`
-  font-size: 28px;
-  margin-bottom: 8px;
-`;
 
 const ContactsList = styled.ul`
   width: 400px;

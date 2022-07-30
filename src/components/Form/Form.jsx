@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import styled from 'styled-components';
 import { nanoid } from 'nanoid';
+import PropTypes from 'prop-types';
 
 class Form extends Component {
   handleSubmit = event => {
@@ -67,5 +68,9 @@ const FormButton = styled.button`
   display: block;
   cursor: pointer;
 `;
+
+Form.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
 
 export default Form;
