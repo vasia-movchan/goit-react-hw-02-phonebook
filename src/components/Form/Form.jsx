@@ -14,7 +14,7 @@ class Form extends Component {
       name,
       number,
     };
-    this.props.onSubmit(contact);
+    this.props.addContact(contact);
     form.reset();
   };
 
@@ -65,7 +65,7 @@ const FormButton = styled.button`
 `;
 
 Form.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
+  addContact: PropTypes.func.isRequired,
 };
 
 export default Form;
