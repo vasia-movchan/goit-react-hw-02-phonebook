@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import Find from 'components/Find/Find';
 
 const Contacts = ({ contacts }) => {
   return (
