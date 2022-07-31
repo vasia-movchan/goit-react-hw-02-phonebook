@@ -2,6 +2,7 @@ import { Component } from 'react';
 import styled from 'styled-components';
 import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
+import Button from 'components/Button/Button';
 
 class Form extends Component {
   handleSubmit = event => {
@@ -43,7 +44,7 @@ class Form extends Component {
           ></FormInput>
         </FormLabel>
 
-        <FormButton type="submit">Add contact</FormButton>
+        <Button type="submit">Add contact</Button>
       </form>
     );
   }
@@ -57,11 +58,6 @@ const FormInput = styled.input`
   display: block;
   font-size: 18px;
   margin-bottom: 12px;
-`;
-
-const FormButton = styled.button`
-  display: block;
-  cursor: pointer;
 `;
 
 Form.propTypes = {

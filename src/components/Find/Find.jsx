@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 class Find extends Component {
   handleChange = event => {
     let inputValue = event.currentTarget.value.toLowerCase();
-    this.props.handleFindInput(inputValue);
+    this.props.onFindInput(inputValue);
   };
 
   render() {

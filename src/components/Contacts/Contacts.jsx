@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import Button from 'components/Button/Button';
 
 const Contacts = ({ contacts, onDelete }) => {
   return (
@@ -8,7 +9,7 @@ const Contacts = ({ contacts, onDelete }) => {
         {contacts.map(contact => (
           <ContactsItem key={contact.id}>
             {contact.name}: {contact.number}
-            <DeleteBtn onClick={() => onDelete(contact.id)}>Delete</DeleteBtn>
+            <Button onClick={() => onDelete(contact.id)}>Delete</Button>
           </ContactsItem>
         ))}
       </ContactsList>
@@ -17,9 +18,8 @@ const Contacts = ({ contacts, onDelete }) => {
 };
 
 const ContactsList = styled.ul`
-  width: 400px;
   list-style: none;
-  padding: 0 0 0 8px;
+  padding: 0;
   margin: 0;
 `;
 
@@ -28,10 +28,6 @@ const ContactsItem = styled.li`
   justify-content: space-between;
   font-size: 18px;
   padding: 4px;
-`;
-
-const DeleteBtn = styled.button`
-  cursor: pointer;
 `;
 
 Contacts.propTypes = {
