@@ -31,7 +31,7 @@ const FindInput = styled.input`
 `;
 
 Find.propTypes = {
-  handleFindInput: PropTypes.func.isRequired,
+  onFindInput: PropTypes.func.isRequired,
 };
 
 export default Find;
