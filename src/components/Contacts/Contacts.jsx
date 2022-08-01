@@ -1,34 +1,20 @@
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import Button from 'components/Button/Button';
+import { Button } from 'components/Button/Button.styled';
+import { ContactsItem } from 'components/ContactsItem/ContactsItem.styled';
+import { ContactsList } from './Contacts.styled';
 
 const Contacts = ({ contacts, onDelete }) => {
   return (
-    <>
-      <ContactsList>
-        {contacts.map(contact => (
-          <ContactsItem key={contact.id}>
-            {contact.name}: {contact.number}
-            <Button onClick={() => onDelete(contact.id)}>Delete</Button>
-          </ContactsItem>
-        ))}
-      </ContactsList>
-    </>
+    <ContactsList>
+      {contacts.map(contact => (
+        <ContactsItem key={contact.id}>
+          {contact.name}: {contact.number}
+          <Button onClick={() => onDelete(contact.id)}>Delete</Button>
+        </ContactsItem>
+      ))}
+    </ContactsList>
   );
 };
-
-const ContactsList = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin: 0;
-`;
-
-const ContactsItem = styled.li`
-  display: flex;
-  justify-content: space-between;
-  font-size: 18px;
-  padding: 4px;
-`;
 
 Contacts.propTypes = {
   contacts: PropTypes.arrayOf(
