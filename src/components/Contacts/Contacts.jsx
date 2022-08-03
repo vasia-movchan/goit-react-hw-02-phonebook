@@ -9,7 +9,7 @@ const Contacts = ({ contacts, onDelete }) => {
       {contacts.map(contact => (
         <ContactsItem key={contact.id}>
           {contact.name}: {contact.number}
-          <Button onClick={() => onDelete(contact.id)}>Delete</Button>
+          <Button handleClickDelete={() => onDelete(contact.id)}>Delete</Button>
         </ContactsItem>
       ))}
     </ContactsList>
