@@ -29,8 +29,8 @@ class App extends Component {
     }
   };
 
-  handleFindInput = inputValue => {
-    this.setState({ filter: inputValue });
+  handleFindInput = event => {
+    this.setState({ filter: event.currentTarget.value.toLowerCase() });
   };
 
   contactsList = contacts => {
@@ -46,12 +46,13 @@ class App extends Component {
   };
 
   render() {
+    const { filter } = this.state;
     return (
       <Wrapper>
         <h1>Phonebook</h1>
         <Form addContact={this.addContact}></Form>
         <h2>Contacts</h2>
-        <Find onFindInput={this.handleFindInput} />
+        <Find inputValue={filter} onFindInput={this.handleFindInput} />
         <Contacts
           contacts={this.contactsList(this.state.contacts)}
           onDelete={this.deleteContact}
